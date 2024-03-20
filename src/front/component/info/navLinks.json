@@ -1,0 +1,14 @@
+[
+  {
+    "href": "/",
+    "title": "Inicio"
+  },
+  {
+    "href": "/somos",
+    "title": "Quiénes somos"
+  },
+  {
+    "href": "/contacto",
+    "title": "Contacto"
+  }
+]
