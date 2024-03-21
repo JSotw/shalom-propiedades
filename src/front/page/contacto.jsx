@@ -4,6 +4,7 @@ import FormContacto from "../component/content/FormContacto.jsx";
 import NavFooter from "../component/footer/NavFooter.jsx";
 import Navbar from "../component/header/Navbar.jsx";
 import { useEffect } from "react";
+import Footer from "../component/footer/Footer.jsx";
 
 const cardContacto = [
   {
@@ -38,7 +39,7 @@ const Contacto = () => {
       <Layout>
         <section className="grid justify-center gap-10">
           <h1 className="text-center font-bold text-xl md:text-3xl text-gray-800">
-            Dónde puede encontrarnos
+            
           </h1>
           <section className="flex w-auto flex-wrap justify-around gap-5 sm:gap-10">
             {cardContacto.map((contactType, index) => (
@@ -66,7 +67,7 @@ const Contacto = () => {
           </section>
         </section>
       </Layout>
-      <NavFooter />
+      <Footer/>
     </>
   );
 };

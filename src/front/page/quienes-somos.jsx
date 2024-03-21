@@ -3,11 +3,11 @@ import {
   CardSomos,
   CardSomosUsuario,
 } from "../component/content/cards/CardSomos.jsx";
-import NavFooter from "../component/footer/NavFooter.jsx";
 import Navbar from "../component/header/Navbar.jsx";
-import infoSomos from "../component/info/infoSomos.json";
-import infoProfile from "../component/info/infoProfile.json";
+import infoSomos from "../info/infoSomos.json";
+import infoProfile from "../info/infoProfile.json";
 import { useEffect } from "react";
+import Footer from "../component/footer/Footer.jsx";
 
 const QuienesSomos = () => {
   useEffect(() => {
@@ -21,7 +21,7 @@ const QuienesSomos = () => {
     <>
       <Navbar />
       <Layout>
-        <h1 className="text-center font-bold text-xl md:text-3xl text-gray-800">Quiénes somos</h1>
+        <h1 className="text-center font-bold text-xl md:text-3xl text-gray-800">Sobre nosotros</h1>
 
         <section className="grid px-5 justify-center">
           <div className="flex gap-6 md:gap-20 justify-center mt-10 flex-wrap">
@@ -48,7 +48,7 @@ const QuienesSomos = () => {
           </div>
         </section>
       </Layout>
-      <NavFooter />
+      <Footer/>
     </>
   );
 };

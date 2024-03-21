@@ -1,27 +1,31 @@
+import { Link } from "react-router-dom";
 import Carousel from "./Carousel";
 
-const Banner = () => {
-  const imagesUrl = [
-    {
-      url: "https://firebasestorage.googleapis.com/v0/b/shalom-propiedades.appspot.com/o/assets%2Ffotos-carrusel%2F1.webp?alt=media&token=661c9424-b52d-44be-b08a-78e8ea55b4fe",
-    },
-    {
-      url: "https://firebasestorage.googleapis.com/v0/b/shalom-propiedades.appspot.com/o/assets%2Ffotos-carrusel%2F2.webp?alt=media&token=9840b2be-fc72-43c6-9a04-3cdccfabd531",
-    },
-    {
-      url: "https://firebasestorage.googleapis.com/v0/b/shalom-propiedades.appspot.com/o/assets%2Ffotos-carrusel%2F3.webp?alt=media&token=f07238e1-e856-4f40-8d29-fccb5fafb3f8",
-    },
-    {
-      url: "https://firebasestorage.googleapis.com/v0/b/shalom-propiedades.appspot.com/o/assets%2Ffotos-carrusel%2F4.webp?alt=media&token=acd39cec-66f7-42c3-bb90-74b20f5a0aa0",
-    },
-  ];
+const Banner = ({imagesUrl}) => {
   return (
-    <section id="banner" className="">
+    <section id="banner" className="relative">
       <Carousel
         autoSlide={true}
-        autoSlideInterval={15000}
+        autoSlideInterval={5000}
         imagesUrl={imagesUrl}
       />
+      <div
+        className="md:bottom-50 md:left-20 absolute bottom-32 w-44 left-0 right-0 mr-auto ml-auto
+        md:m-0"
+      >
+        <h4 className="font-bold text-center text-white text-3xl">SHALOM</h4>
+        <p className="text-center p-2 font-normal text-gray-100">
+          Venta | Arriendo
+        </p>
+        <Link
+          className="text-purple-800 rounded-lg font-bold text-center text-sm p-4
+          transition-all hover:scale-105 duration-300 flex justify-center 
+          bg-white "
+          to="/propiedades"
+        >
+          Ver propiedades
+        </Link>
+      </div>
     </section>
   );
 };

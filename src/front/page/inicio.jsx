@@ -6,10 +6,12 @@ import Banner from "../component/content/banner/Banner.jsx";
 import { useProperty } from "../../back/context/PropertyContext.jsx";
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
+import Footer from "../component/footer/Footer.jsx";
 //import CardBuscador from "../component/content/cards/CardBuscador.jsx";
 
 const Inicio = () => {
   const { getLastFourP, lastFourP } = useProperty();
+  const imagesUrls = [];
 
   useEffect(() => {
     getLastFourP();
@@ -20,23 +22,28 @@ const Inicio = () => {
     });
   }, []);
 
+  for (let i = 0; i < lastFourP.length; i++) {
+    //console.log(imagesF[i]);
+    imagesUrls.push({ url: lastFourP[i].images[0] });
+  }
+
   return (
     <>
       <Navbar />
-      <section className="h-full mt-20">
-        <Banner />
+      <section className="h-full relative">
+        {lastFourP.length > 0 ? <Banner imagesUrl={imagesUrls} /> : ""}
       </section>
       <Layout>
-        <main className="grid gap-4">
+        <main className="grid">
           <section className="grid">
-            <h1 className="text-center font-bold text-xl md:text-3xl text-gray-800 px-10">
-              Encuentra casas y departamentos en arriendo o venta
-            </h1>
             <div className="w-full grid justify-around gap-6">
-              <h1 className="font-normal px-10 md:px-10 text-xl mt-14">
-                Novedades{" "}
-                <span className="pl-4 text-[14px]">
-                  <Link className=" text-blue-600" to="/propiedades">
+              <h1 className="text-left font-bold text-xl md:text-3xl text-gray-800 px-4">
+                Propiedades disponibles
+              </h1>
+              <h1 className="text-left -mt-4 font-light text-sm px-5 flex flex-col sm:block">
+                Propiedades agregadas recientemente
+                <span className="text-[12px]">
+                  <Link className="sm:pl-4 text-end text-blue-600" to="/propiedades">
                     Ver más...
                   </Link>
                 </span>
@@ -66,7 +73,7 @@ const Inicio = () => {
           </section>
         </main>
       </Layout>
-      <NavFooter />
+      <Footer />
     </>
   );
 };

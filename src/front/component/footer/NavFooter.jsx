@@ -5,7 +5,7 @@ import Logo from "../../../assets/img/logo/shalom-black-1.webp";
 import { FaFacebook, FaInstagram, FaYoutube } from "react-icons/fa";
 import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 
-import navLinks from "../info/navLinks.json"
+import navLinks from "../../info/navLinks.json"
 
 const NavFooter = () => {
   const [navfooterOpen, setNavfooterOpen] = useState(false);

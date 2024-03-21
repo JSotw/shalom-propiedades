@@ -1,21 +1,25 @@
-import {
-  FaBath,
-  FaBed,
-  FaCalendarCheck,
-  FaExpand,
-} from "react-icons/fa";
+import { FaBath, FaBed, FaCalendarCheck, FaExpand } from "react-icons/fa";
 
 import { SpinnerLoading } from "../../svgLoading";
 
-const CardInfoPropiedad = ({title, price, size, cant_bathroom, cant_bedroom}) => {
+const CardInfoPropiedad = ({
+  title,
+  price,
+  size,
+  cant_bathroom,
+  cant_bedroom,
+}) => {
   return (
-    <div className="p-5 text-sm font-normal bg-white shadow-lg rounded-xl w-auto gap-2 xl:gap-4 flex 
-      flex-col">
+    <div
+      className="p-5 text-sm font-normal bg-white shadow-lg rounded-xl w-auto gap-2 xl:gap-4 flex 
+      flex-col"
+    >
       <h3 className="font-semibold text-lg lg:text-lg">
         {`${title}`}
+        <div className="h-[1px] rounded-xl bg-purple-500 "></div>
       </h3>
       <p className="pt-1 xl:pt-5 text-xs">Desde</p>
-      <p className="font-light lg:text-3xl text-2xl">
+      <p className="font-bold -mt-4 lg:text-3xl text-2xl text-purple-500">
         {price ? (
           <p>{price}</p>
         ) : (
@@ -40,19 +44,11 @@ const CardInfoPropiedad = ({title, price, size, cant_bathroom, cant_bedroom}) =>
       </span>
       <span className="flex items-center gap-5">
         <FaBath />
-        {cant_bathroom ? (
-          <p>{cant_bathroom} baños</p>
-        ) : (
-          "No aplica"
-        )}
+        {cant_bathroom ? <p>{cant_bathroom} baños</p> : "No aplica"}
       </span>
       <span className="flex items-center gap-5">
         <FaBed />
-        {cant_bedroom ? (
-          <p>{cant_bedroom} dormitorios</p>
-        ) : (
-          "No aplica"
-        )}
+        {cant_bedroom ? <p>{cant_bedroom} dormitorios</p> : "No aplica"}
       </span>
       {/* <span className="flex items-center gap-5">
         <FaCalendarCheck />

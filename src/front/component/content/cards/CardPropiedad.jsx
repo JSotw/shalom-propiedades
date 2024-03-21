@@ -20,11 +20,11 @@ const CardPropiedad = ({
         alt="Image property"
       />
       <div className="px-6 py-4">
-        <p className="text-xs text-gray-500 text-light">
+        <p className="text-xs text-purple-500 text-light">
           {`${type} en ${category}`}
         </p>
         <p className="text-sm font-semibold text-gray-900">Desde</p>
-        <h3 className="font-bold text-lg">{`${price}`}</h3>
+        <h3 className="font-bold text-lg text-purple-600">{`${price}`}</h3>
         <span className="text-xs text-gray-600 py-2 gap-2 flex items-center">
           <HiLocationMarker />
           {location_region}

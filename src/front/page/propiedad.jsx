@@ -17,6 +17,7 @@ import {
   CardSkeletonImage,
   CardSkeletonDescription,
 } from "../component/content/cards/CardSkeletonInfo";
+import Footer from "../component/footer/Footer";
 
 const Propiedad = () => {
   const { getPropertyF, getImagesF, imagesF } = useProperty();
@@ -85,17 +86,18 @@ const Propiedad = () => {
       <Layout>
         <section className="flex justify-center ">
           <div className="rounded-xl max-w-[1400px] w-[1400px] justify-center grid">
-            <nav className=" bg-gray-200 shadow rounded-xl justify-between items-center flex h-10">
+            <nav className=" bg-purple-900 relative z-10 animate-flip-down justify-between items-center 
+            flex h-10 -mt-6 md:-mt-3 rounded-bl-xl rounded-br-xl w-full">
               <div className="inline-flex text-sm">
-                <Link to="/propiedades" className="p-2 text-blue-500">
+                <Link to="/propiedades" className="p-2 text-white font-semibold">
                   Volver
                 </Link>
-                <span className="bg-gray-400 opacity-70 w-[0.5px] my-2"></span>
+                <span className="bg-white opacity-70 w-[1.5px] rounded-lg my-2"></span>
                 {propertyF != undefined && loading === false ? (
                   <span className="inline-flex">
-                    <p className="p-2 text-gray-500">{propertyF.type}</p>
-                    <p className="p-2 text-gray-500"> {">"} </p>
-                    <p className="p-2 text-gray-500">{propertyF.category}</p>
+                    <p className="p-2 text-gray-400 font-medium">{propertyF.type}</p>
+                    <p className="p-2 text-gray-400 font-medium"> {">"} </p>
+                    <p className="p-2 text-gray-400 font-medium">{propertyF.category}</p>
                   </span>
                 ) : (
                   ""
@@ -106,8 +108,8 @@ const Propiedad = () => {
                   Ver más
                 </Link> */}
                 <span className="bg-gray-400 opacity-70 w-[0.5px] my-2"></span>
-                <Link to="/contacto" className="p-2 text-blue-500 hover:">
-                  Contactar
+                <Link to="/contacto" className="p-2 text-white font-semibold">
+                  
                 </Link>
               </div>
             </nav>
@@ -162,7 +164,7 @@ const Propiedad = () => {
               <div className="grid w-auto xl:w-full 2xl:px-28">
                 {propertyF.description != undefined && loading === false ? (
                   <div className="rounded-xl p-6 shadow-lg bg-white">
-                    <h3 className="text-xl font-semibold">Descripción</h3>
+                    <h3 className="text-xl font-bold">Descripción</h3>
                     <p className="text-sm py-3">{propertyF.description}</p>
                     <hr />
                     <p className="text-sm pt-3 font-bold">{`${location}`}</p>
@@ -175,7 +177,7 @@ const Propiedad = () => {
           </div>
         </section>
       </Layout>
-      <NavFooter />
+      <Footer/>
     </>
   );
 };
