@@ -71,10 +71,11 @@ function FormContacto() {
 
 
           <div>
-            <button className="text-red hover:before:bg-red-border-red-500 relative h-10 w-full overflow-hidden border border-purple-400 bg-white px-3
-         text-purple-400 shadow-lg shadow-purple-100 transition-all before:absolute before:bottom-0 before:left-0 before:top-0 before:z-0 
-          before:h-full before:w-0 before:bg-purple-400 before:transition-all before:duration-500 hover:text-white hover:shadow-purple-100 
-          hover:before:left-0 hover:before:w-full rounded text-[12px]">
+            <button className="hover:before:bg-red-border-red-500 relative h-10 w-full overflow-hidden 
+            border border-purple-600 bg-white px-3 text-purple-600 shadow-lg shadow-purple-200 
+            transition-all before:absolute before:bottom-0 before:left-0 before:top-0 before:z-0 before:h-full 
+            before:w-0 before:bg-purple-600 before:transition-all before:duration-500 hover:text-white 
+            hover:shadow-purple-200 hover:before:left-0 hover:before:w-full rounded text-[14px] font-semibold">
               <span className="relative z-10">Enviar</span>
             </button>
           </div>

@@ -23,41 +23,37 @@ const Propiedades = () => {
   const lastProperties = propertiesF.sort(
     (a, b) => new Date(a.updatedAt).getTime() < new Date(b.updatedAt).getTime()
   );
-  console.log(propertiesF);
-  console.log(lastProperties);
+  // console.log(propertiesF);
+  // console.log(lastProperties);
 
   return (
     <>
       <Navbar />
+      <nav
+        className=" bg-purple-900 relative z-10 animate-flip-down justify-between items-center 
+            flex h-10 mt-[70px] rounded-bl-xl rounded-br-xl w-full"
+      >
+        <div className="inline-flex text-sm">
+          <Link to="/" className="p-2 text-white font-semibold">
+            Volver
+          </Link>
+          <span className="bg-white opacity-70 w-[1.5px] rounded-lg my-2"></span>
+          <p className="p-2 text-gray-400 font-medium">Propiedades</p>
+        </div>
+        <div className="inline-flex text-sm">
+          {/* <Link to="/propiedades" className="p-2 text-blue-500">
+                  Ver más
+                </Link> */}
+          <span className="bg-gray-400 opacity-70 w-[0.5px] my-2"></span>
+          <Link to="/contacto" className="p-2 text-white font-semibold"></Link>
+        </div>
+      </nav>
       <Layout>
         <section className="flex justify-center">
           {/* <aside className="w-[40vw] px-5">
            <CardCatalogo />
           </aside> */}
           <div className="grid gap-8 justify-around">
-            <nav
-              className=" bg-purple-900 relative z-10 animate-flip-down justify-between items-center 
-            flex h-10 -mt-6 md:-mt-3 rounded-bl-xl rounded-br-xl w-full"
-            >
-              <div className="inline-flex text-sm">
-                <Link to="/" className="p-2 text-white font-semibold">
-                  Volver
-                </Link>
-                <span className="bg-white opacity-70 w-[1.5px] rounded-lg my-2"></span>
-                <p className="p-2 text-gray-400 font-medium">Propiedades</p>
-              </div>
-              <div className="inline-flex text-sm">
-                {/* <Link to="/propiedades" className="p-2 text-blue-500">
-                  Ver más
-                </Link> */}
-                <span className="bg-gray-400 opacity-70 w-[0.5px] my-2"></span>
-                <Link
-                  to="/contacto"
-                  className="p-2 text-white font-semibold"
-                ></Link>
-              </div>
-            </nav>
-
             <div className="flex flex-wrap gap-10 justify-center">
               {lastProperties?.map((p, index) => (
                 <article key={index}>

@@ -20,11 +20,11 @@ const Navbar = () => {
         <Link className="flex items-center" to="/">
           <img className={user ? "w-16 lg:w-16 md:w-10" : "p-1 w-32"} src={user ? LogoIsAuth : Logo} alt="" />
         </Link>
-        <div className="mobile-menu block md:hidden mt-1 rounded">
+        <div className="mobile-menu block md:hidden p-1 m-2 rounded">
           {!navbarOpen ? (
             <button
               onClick={() => setNavbarOpen(true)}
-              className="text-white flex items-center p-3 rounded
+              className="text-white flex items-center p-[10px] rounded
                   transition-all"
             >
               <HiMenuAlt3 className="h-6 w-6" />
