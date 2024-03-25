@@ -83,11 +83,8 @@ const Propiedad = () => {
   return (
     <>
       <Navbar />
-      <Layout>
-        <section className="flex justify-center ">
-          <div className="rounded-xl max-w-[1400px] w-[1400px] justify-center grid">
-            <nav className=" bg-purple-900 relative z-10 animate-flip-down justify-between items-center 
-            flex h-10 -mt-6 md:-mt-3 rounded-bl-xl rounded-br-xl w-full">
+      <nav className=" bg-purple-900 relative z-10 animate-flip-down justify-between items-center 
+            flex h-10 mt-[70px] rounded-bl-xl rounded-br-xl w-full">
               <div className="inline-flex text-sm">
                 <Link to="/propiedades" className="p-2 text-white font-semibold">
                   Volver
@@ -113,6 +110,10 @@ const Propiedad = () => {
                 </Link>
               </div>
             </nav>
+      <Layout>
+        <section className="flex justify-center ">
+          <div className="rounded-xl max-w-[1400px] w-[1400px] justify-center grid">
+
             <div
               className="grid lg:flex flex-wrap w-auto justify-center lg:justify-center p-3 
               gap-4 md:p-3 rounded-xl "
