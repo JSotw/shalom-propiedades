@@ -1,4 +1,4 @@
-import Img404 from "../../assets/img/icono/error-404.png";
+import Img404 from "../../assets/img/iconos/error404.webp";
 import { useAuth } from "../../back/context/AuthContext";
 import { Link } from "react-router-dom";
 import { RiWhatsappFill } from "react-icons/ri";
